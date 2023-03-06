@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Menu</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/speechkitt/2.0.0/speechkitt.min.js"></script>
+	<script>
+		var categories = ["Appetizers", "Main Dishes", "Desserts"];
+		var menu = {
+			"Appetizers": ["Garlic Bread", "Mozzarella Sticks", "Bruschetta"],
+			"Main Dishes": ["Spaghetti Bolognese", "Margherita Pizza", "Chicken Alfredo"],
+			"Desserts": ["Tiramisu", "Cheesecake", "Chocolate Brownie"]
+		};
+
+		var currentCategory = "";
+		var currentItems = [];
+
+		function speak(text) {
+			SpeechKITT.setInstructionsText(text);
+			SpeechKITT.setSpeechRecognizer("google");
+			SpeechKITT.startRecognition();
+		}
+
+		function readMenu() {
+			var text = "Welcome to our restaurant. Our menu has the following categories: ";
+			for (var i = 0; i < categories.length; i++) {
+				text += categories[i] + ", ";
+			}
+			text += "Please say the name of the category you would like to explore.";
+			speak(text);
+		}
+
+		function readItems() {
+			var text = "Here are the items under " + currentCategory + ": ";
+			for (var i = 0; i < currentItems.length; i++) {
+				text += currentItems[i] + ", ";
+			}
+			text += "Please say the name of the item you would like to order, or say 'back' to go back to the main menu, or say 'repeat' to hear the menu again.";
+			speak(text);
+		}
+
+		function handleResult(result) {
+			var transcript = result.final_transcript.trim().toLowerCase();
+
+			if (categories.includes(transcript)) {
+				currentCategory = transcript;
+				currentItems = menu[currentCategory];
+				readItems();
+			} else if (currentItems.includes(transcript)) {
+				var text = "You have ordered " + transcript + ". Thank you for your order.";
+				speak(text);
+			} else if (transcript === "back") {
+				currentCategory = "";
+				currentItems = [];
+				readMenu();
+			} else if (transcript === "repeat") {
+				if (currentCategory === "") {
+					readMenu();
+				} else {
+					readItems();
+				}
+			} else {
+				var text = "I'm sorry, I didn't understand. Please say the name of the category or item you would like to order, or say 'back' or 'repeat'.";
+				speak(text);
+			}
+		}
+
+		SpeechKITT.setInstructionsText("Click the microphone and say 'menu' to start.");
+		SpeechKITT.setStartCommand(function() {
+			readMenu();
+		});
+		SpeechKITT.setResultsHandler(handleResult);
+	</script>
+</head>
+<body>
+	<h1>Restaurant Menu</h1>
+	<button onclick="SpeechKITT.toggleRecognition()">Speak</button>
+</body>
+</html>
