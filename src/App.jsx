@@ -17,7 +17,6 @@ const App = () => {
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />
-      {/* <h1 className='text-white'>Hello</h1> */}
           <StarsCanvas />
         </div>
       </div>
