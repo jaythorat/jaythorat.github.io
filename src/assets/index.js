@@ -34,15 +34,18 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import plotmydata from "./company/plotmydata.png";
 import proccedDigital from "./company/proceeddigital.png";
-import ooef from "./company/OOEFLogo.jpg"
+import ooef from "./company/ooefLogo.png"
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import portfolio from "./portfolio.png";
 import mvr from "./mvr.jpeg";
 import businesslead from "./businesslead.png";
-import sample from "./sample.jpg"
+import sample from "./sample.jpg" ;
+import dns_server from "./DNSServer.png";
+import handwrittenCharRecog from "./HandwrittenCharRec.png";
+import rdp from "./rdp.png";
+import quickstartdjango from "./quickstartdjango.png";
+import pywsgi from "./pywsgi.png";
 
 
 import githubNav from "./githubNav.png";
@@ -86,13 +89,17 @@ export {
   tesla,
   proccedDigital,
   plotmydata,
-  carrent,
-  jobit,
+
   tripguide,
   portfolio,
   ooef,
   mvr,
+  dns_server,
+  handwrittenCharRecog,
+  rdp,
+  quickstartdjango,
   businesslead,
+  pywsgi,
   sample,
   githubNav,
   linkedInNav,
