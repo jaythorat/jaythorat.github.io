@@ -35,6 +35,7 @@ import tesla from "./company/tesla.png";
 import plotmydata from "./company/plotmydata.png";
 import proccedDigital from "./company/proceeddigital.png";
 import ooef from "./company/ooefLogo.png"
+import vizualIntelligence from "./company/vizualIntelligence.jpg";
 
 import tripguide from "./tripguide.png";
 import portfolio from "./portfolio.png";
@@ -89,6 +90,7 @@ export {
   tesla,
   proccedDigital,
   plotmydata,
+  vizualIntelligence,
 
   tripguide,
   portfolio,

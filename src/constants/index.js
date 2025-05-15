@@ -41,6 +41,7 @@ import {
   githubNav,
   vedantAher,
   jakeWright,
+  vizualIntelligence,
 
 
 } from "../assets";
@@ -177,8 +178,8 @@ const experiences = [
   {
     title: "Python Developer and Automation Engineer",
     company_name: "Vizual Intelligence",
-    icon: plotmydata,
-    iconBg: "#383E56",
+    icon: vizualIntelligence,
+    iconBg: "#FFFFFF",
     date: "Jun 2024 - Nov 2024",
     points: [
       "Automated lead generation using ZeroWork and Kanbox, delivering 1.25 lakh daily leads from Apollo and LinkedIn.",
