@@ -28,6 +28,7 @@ import {
   sklearn,
   mvr,
   dns_server,
+  meowmail,
   handwrittenCharRecog,
   rdp,
   quickstartdjango,
@@ -240,6 +241,26 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    "name": "MeowMail - Disposable Email Service",
+    "description": "MeowMail is a free, privacy-first disposable email service. Create a temporary inbox instantly—no signup or personal data required. Emails arrive in real time and auto-delete after 1 hour. No ads, no tracking, just a clean and secure experience online for complete peace of mind.",
+    "tags": [
+      {
+        "name": "Elixir",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "Communication",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "Privacy",
+        "color": "pink-text-gradient"
+      }
+    ],
+    "image": meowmail,
+    "external_link": "https://meowmail.in"
+  },
   {
     "name": "Custom DNS Server - Python",
     "description": "Python-based DNS server for custom `.ks` domains, enabling advanced resolution of A and CNAME records with upstream integration via Google DNS, offering a scalable and configurable experience for seamless domain management and enhanced network reliability.",

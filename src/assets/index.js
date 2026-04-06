@@ -43,6 +43,7 @@ import mvr from "./mvr.jpeg";
 import businesslead from "./businesslead.png";
 import sample from "./sample.jpg" ;
 import dns_server from "./DNSServer.png";
+import meowmail from "./meowmail.png";
 import handwrittenCharRecog from "./HandwrittenCharRec.png";
 import rdp from "./rdp.png";
 import quickstartdjango from "./quickstartdjango.png";
@@ -97,6 +98,7 @@ export {
   ooef,
   mvr,
   dns_server,
+  meowmail,
   handwrittenCharRecog,
   rdp,
   quickstartdjango,
